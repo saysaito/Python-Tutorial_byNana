@@ -1,10 +1,8 @@
-from helper import validate_and_execute, user_input_message
+from user import User
+from post import Post
+user_one= User("aki@aa.com","Aki","1234","Developer")
+user_one.change_job_title("Senior Developer")
+user_one.get_user_info()
 
-user_input = ""
-while user_input != "exit":
-    user_input = input(user_input_message)
-    if user_input != "exit":
-        days_and_unit = user_input.split(":")
-        days_and_unit_dictionary={"days":days_and_unit[0],"unit":days_and_unit[1]}
-        print(days_and_unit_dictionary)
-        validate_and_execute(days_and_unit_dictionary)
+Post_one = Post("Hello",user_one)
+Post_one.get_post_info()
